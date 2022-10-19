@@ -82,6 +82,8 @@ export const header = css({
     display: "flex",
     alignItems: 'center',
     justifyContent: 'space-around',
+
+    zIndex: 3,
 })
 
 export const headerIcons = css({
@@ -148,8 +150,12 @@ export const dropDownSep = css ({
     borderRadius: '$round',
 })
 
+export const homePlane = css({
+    position: 'absolute',
+    right: 200,
+    top: 70,
+})
+
 export const hidden = css({
     display: 'none',
 })
-
-
