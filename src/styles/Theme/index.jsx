@@ -1,5 +1,5 @@
 import { createStitches, css, globalCss } from "@stitches/react"
-import { sky, red } from '@radix-ui/colors';
+import { sky, red, blue } from '@radix-ui/colors';
 
 
 export const globalStyles = globalCss({
@@ -11,17 +11,18 @@ export const appTheme = createStitches({
         colors: {
             ...sky,
             ...red,
+            ...blue,
 
             basesky: '$sky2',
-            headersky: '$sky10',
+            headersky: '$blue10',
 
             lctext: '$sky11',
             hctext: '$sky12',
             exit: '$red11',
 
-            hbutton: '$sky3',
-            hbuttonHovered: '$sky4',
-            hbuttonSelected: '$sky5',
+            hbutton: '$sky7',
+            hbuttonHovered: '$sky8',
+            hbuttonSelected: '$sky4',
 
         },
         space: {
@@ -61,14 +62,14 @@ export const appTheme = createStitches({
 });
 
 export const body = css({
-    backgroundColor: '$basesky' ,
+    backgroundImage: `linear-gradient(45deg, ${'$sky5'} 0%, ${'$sky10'} 100%)`,
     color: '$header',
     height: '100vh',
     width: '100%',
 })
 
 export const header = css({
-    backgroundColor: '$headersky',
+    backgroundColor: '$basesky',
     color: 'bg',
 
     position: 'fixed',
@@ -94,32 +95,32 @@ export const headerButtons = css({
     alignItems: 'center',
 
     textDecoration: 'none',
-    border: 'none',
+    border: 'solid 1.5px $hbutton',
     borderRadius: '$medium',
 
     padding: '$2',
     margin: '$2',
 
-    backgroundColor: '$hbutton',
+    background: 'none',
     color: '$lctext',
     fontWeight: '600',
 
     fontSize: '$2',
     
     '&:hover': {
-        backgroundColor: '$hbuttonHovered',
+        borderColor: '$hbuttonHovered',
     },
-    '&:focus': {
-        border: 'none',
+    '&:focus': {      
         backgroundColor: '$hbuttonSelected',
     }
 })
 
 export const dropDownContent = css({
-    backgroundColor: '$hbutton',
+    backgroundColor: '$basesky',
     boxShadow:'0px 10px 38px rgba(22, 23, 24, 0.468)',
     padding: '$2 $1',
     borderRadius: '$medium',
+    marginTop: '$1',
 })
 
 export const dropDownItems = css({
@@ -129,9 +130,10 @@ export const dropDownItems = css({
             default: { color: '$lctext', },
         },
     },
+    borderRadius: '$small',
     padding: '$1',
     '&:hover': {
-        backgroundColor: '$hbuttonHovered',
+        backgroundColor: '$sky4',
     },
 
     defaultVariants: {
@@ -141,7 +143,7 @@ export const dropDownItems = css({
 
 export const dropDownSep = css ({
     height: 1,
-    backgroundColor: '$lctext',
+    backgroundColor: '$sky6',
     margin: '$1',
     borderRadius: '$round',
 })
