@@ -1,20 +1,17 @@
-import LogoWhite from './assets/LogoWhite.png'
+import LogoWhite from './assets/LogoWhite.svg'
 import { HeaderDropDown } from '../DropDownMenu'
-import { css } from '@stitches/react';
-import { button } from './style';
-
-const body = css({padding: 40,})
+import { header } from '../../styles/Theme';
 
 export function Header () {
 
     return(
-        <div className={body()}>
-                <div className="logo">
-                    <img src={LogoWhite} alt="" />
-                </div>
+        <div className={header()} >
+            <div className="logo">
+                <img src={LogoWhite} alt="" />
+            </div>
             <div className="links">
                 <HeaderDropDown />
-                <button className={button()} >Suporte</button>
+                <button>Suporte</button>
             </div>
         </div>
     );
