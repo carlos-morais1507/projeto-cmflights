@@ -1,6 +1,6 @@
 import LogoWhite from './assets/LogoWhite.svg'
 import { HeaderDropDown } from '../DropDownMenu'
-import { header } from '../../styles/Theme';
+import { header, headerButtons } from '../../styles/Theme';
 
 export function Header () {
 
@@ -11,7 +11,7 @@ export function Header () {
             </div>
             <div className="links">
                 <HeaderDropDown />
-                <button>Suporte</button>
+                <button className={headerButtons()} >Suporte</button>
             </div>
         </div>
     );
