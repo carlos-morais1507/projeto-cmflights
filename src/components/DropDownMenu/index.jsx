@@ -4,7 +4,7 @@ import { headerButtons, dropDownContent, dropDownItems, headerIcons, hidden, dro
 import AccountIcon from './assets/accountIcon.svg'
 
 export function HeaderDropDown () {
-    const [loggedin, SetLoggedin] = useState(false);
+    const [loggedin, setLoggedin] = useState(true);
 
     return(
         <DropdownMenu.Root>
