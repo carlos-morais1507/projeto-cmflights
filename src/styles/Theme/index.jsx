@@ -66,6 +66,8 @@ export const body = css({
     color: '$header',
     height: '100vh',
     width: '100%',
+    marginTop: 100,
+    height: 'calc(100vh - 100px)',
 })
 
 export const header = css({
@@ -78,6 +80,7 @@ export const header = css({
 
     width: '100%',
     height: 100,
+    maxHeight: 100,
 
     display: "flex",
     alignItems: 'center',
@@ -123,6 +126,7 @@ export const dropDownContent = css({
     padding: '$2 $1',
     borderRadius: '$medium',
     marginTop: '$1',
+
 })
 
 export const dropDownItems = css({
@@ -152,8 +156,30 @@ export const dropDownSep = css ({
 
 export const homePlane = css({
     position: 'absolute',
-    right: 200,
-    top: 70,
+    right: 100,
+    y: -20,
+    zIndex: 0,
+    userSelect: 'none',
+})
+
+export const homeContent = css ({
+    display: 'flex',
+    alignItems: 'center',
+
+    position: 'absolute',
+    zIndex: 2,
+
+    width: '100%',
+    height: 'calc(100vh - 100px)',
+
+    overflow: 'hidden',
+})
+
+export const homeTitle = css({
+    fontSize: '$8',
+    maxWidth: 600,
+    paddingLeft: 100,
+    color: '$lctext',
 })
 
 export const hidden = css({
